@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEMPRETURE_CONVERTOR</title>
+    <link rel="stylesheet" href="tempreture.css">
+</head>
+<body>
+    <video src="tempreture.mp4" muted loop autoplay  class="video"></video>
+    <div id="box">
+        <h1 class="heading">
+            Tempreture convertor
+            <hr id="m">
+        </h1>
+        <div class="q">
+        <label for="Celcius">Celcius</label>
+         <input  type="number" placeholder="enter the number" id="a">
+         <button type="button" onclick="convert_fahrenheit()" id="button">convert_fahrenheit</button>
+        </div>
+        <div class="m">
+         <label for="fahrenheit">Fahrenheit</label>
+         <input type="number" placeholder="enter the number" id="s">
+         <button type="button" onclick="medusa()" id="button">convert_calcius</button>
+          </div>
+
+    </div>
+    <script>
+         function  convert_fahrenheit(){
+            var celcius= parseFloat(document.querySelector("#a").value);
+            var fahrenheit = (1.8*celcius)+32;
+            var m=fahrenheit.toFixed(2);
+
+            document.querySelector("#saurabh").value  = m;
+            document.querySelector("#arpit").value = celcius;
+        
+        }
+        function medusa(){
+            var fahrenheit= parseFloat(document.querySelector("#s").value);
+            var celcius = (fahrenheit-32)/1.8;
+            var k=celcius.toFixed(2);
+
+            document.querySelector("#a").value  = k;
+            document.querySelector("#s").value = fahrenheit;
+        }
+    </script>
+</body>
+</html>
